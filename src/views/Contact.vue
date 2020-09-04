@@ -10,7 +10,7 @@
 #contact {
   position: relative;
   height: 100vh;
-  background-color: white;
+  background-color: $veryLight;
 }
 h2 {
   margin-top: 0;

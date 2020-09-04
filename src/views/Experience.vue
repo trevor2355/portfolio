@@ -34,15 +34,11 @@
     <div class="experience-details">
       <div class="color-section">DETAILS</div>
       <div class="experience-list">
-        <div
-          class="experience-item"
+        <ExperienceListItem
           v-for="experience in experiences"
           :key="experience.id"
           :experience="experience"
-        >
-          {{ experience.company }} - {{ experience.jobTitle }}
-          <span class="cheveron"><CheveronDown></CheveronDown></span>
-        </div>
+        />
       </div>
     </div>
   </div>
@@ -50,13 +46,13 @@
 <script>
 import ArrowLeftDropCircleOutlineIcon from "vue-material-design-icons/ArrowLeftDropCircleOutline.vue";
 import ArrowRightDropCircleOutlineIcon from "vue-material-design-icons/ArrowRightDropCircleOutline.vue";
-import CheveronDown from "vue-material-design-icons/ChevronDown.vue";
 import ExperienceTimeLine from "@/components/ExperienceTimeLine.vue";
+import ExperienceListItem from "@/components/ExperienceListItem.vue";
 export default {
   components: {
     ArrowLeftDropCircleOutlineIcon,
     ArrowRightDropCircleOutlineIcon,
-    CheveronDown,
+    ExperienceListItem,
     ExperienceTimeLine
   },
   data: () => {
@@ -72,8 +68,10 @@ export default {
             "Created therapist web-platform using vue.js",
             "Created ios/android application with React Native"
           ],
+          description: "Intensive immersive program. Learned React to build front-end applications. Learned many database technologies such as MySQL, Postgres, and MongoDB. Intensive immersive program. Learned React to build front-end applications. Learned many database technologies such as MySQL, Postgres, and MongoDB.",
           startDate: new Date(2020, 6, 1),
-          endDate: new Date()
+          endDate: new Date(),
+          displayed: false
         },
         {
           id: 2,
@@ -84,8 +82,10 @@ export default {
             "Learned React to build front-end applications",
             "Learned many database technologies such as MySQL, Postgres, and MongoDB"
           ],
+          description: "Intensive immersive program. Learned React to build front-end applications. Learned many database technologies such as MySQL, Postgres, and MongoDB. Intensive immersive program. Learned React to build front-end applications. Learned many database technologies such as MySQL, Postgres, and MongoDB.",
           startDate: new Date(2020, 1, 1),
-          endDate: new Date(2020, 4, 3)
+          endDate: new Date(2020, 4, 3),
+          displayed: true
         },
         {
           id: 3,
@@ -97,8 +97,10 @@ export default {
             "Prepared and gave sales presentations",
             "Worked directly with customer service to ensure customer satisfaction"
           ],
+          description: "Intensive immersive program. Learned React to build front-end applications. Learned many database technologies such as MySQL, Postgres, and MongoDB. Intensive immersive program. Learned React to build front-end applications. Learned many database technologies such as MySQL, Postgres, and MongoDB.",
           startDate: new Date(2019, 0, 1),
-          endDate: new Date(2019, 10, 30)
+          endDate: new Date(2019, 10, 30),
+          displayed: false
         },
         {
           id: 4,
@@ -110,8 +112,10 @@ export default {
             "Prepared and gave sales presentations",
             "Worked directly with customer service to ensure customer satisfaction"
           ],
+          description: "Intensive immersive program. Learned React to build front-end applications. Learned many database technologies such as MySQL, Postgres, and MongoDB. Intensive immersive program. Learned React to build front-end applications. Learned many database technologies such as MySQL, Postgres, and MongoDB.",
           startDate: new Date(2018, 6, 1),
-          endDate: new Date(2018, 11, 31)
+          endDate: new Date(2018, 11, 31),
+          displayed: false
         },
         {
           id: 5,
@@ -123,8 +127,10 @@ export default {
             "Prepared and gave sales presentations",
             "Worked directly with customer service to ensure customer satisfaction"
           ],
+          description: "Intensive immersive program. Learned React to build front-end applications. Learned many database technologies such as MySQL, Postgres, and MongoDB. Intensive immersive program. Learned React to build front-end applications. Learned many database technologies such as MySQL, Postgres, and MongoDB.",
           startDate: new Date(2018, 0, 1),
-          endDate: new Date(2018, 5, 30)
+          endDate: new Date(2018, 5, 30),
+          displayed: false
         },
         {
           id: 6,
@@ -136,8 +142,10 @@ export default {
             "Prepared and gave sales presentations",
             "Worked directly with customer service to ensure customer satisfaction"
           ],
+          description: "Intensive immersive program. Learned React to build front-end applications. Learned many database technologies such as MySQL, Postgres, and MongoDB. Intensive immersive program. Learned React to build front-end applications. Learned many database technologies such as MySQL, Postgres, and MongoDB.",
           startDate: new Date(2017, 7, 15),
-          endDate: new Date(2017, 11, 31)
+          endDate: new Date(2017, 11, 31),
+          displayed: false
         }
       ]
     };
@@ -252,13 +260,5 @@ button {
   flex-direction: column;
   flex-grow: 1;
   // border: solid 1px $light;
-}
-.experience-item {
-  text-align: center;
-  padding: 16px;
-  border-bottom: solid 1px $light;
-}
-.cheveron {
-  margin-top: 24px;
 }
 </style>

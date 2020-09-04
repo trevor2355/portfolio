@@ -3,7 +3,6 @@
     <a>Home</a>
     <a>Projects</a>
     <a>Experience</a>
-    <a>Travel Map</a>
     <a>Contact Me</a>
   </nav>
 </template>

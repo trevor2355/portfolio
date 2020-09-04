@@ -18,6 +18,7 @@ p {
   color: white;
   font-size: 16px;
   padding-top: 24px;
+  margin: 0;
 }
 u:hover {
   cursor: pointer;

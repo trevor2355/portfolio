@@ -4,7 +4,6 @@
     <Home />
     <Projects />
     <Experience />
-    <Travel />
     <Contact />
     <Footer />
   </div>
@@ -14,7 +13,6 @@ import NavBar from "@/components/NavBar.vue";
 import Home from "@/views/Home.vue";
 import Projects from "@/views/Projects.vue";
 import Experience from "@/views/Experience.vue";
-import Travel from "@/views/Travel.vue";
 import Contact from "@/views/Contact.vue";
 import Footer from "@/components/Footer.vue";
 
@@ -25,7 +23,6 @@ export default {
     Home,
     Projects,
     Experience,
-    Travel,
     Contact,
     Footer
   }
@@ -40,6 +37,5 @@ body {
 #app {
   font-family: "Rubik", sans-serif;
   background-color: rgb(255, 253, 253);
-  // height: 2000px;
 }
 </style>
