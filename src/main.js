@@ -1,7 +1,7 @@
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
-import '@/augments'
+import "@/augments";
 
 Vue.config.productionTip = false;
 

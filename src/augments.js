@@ -1,7 +1,7 @@
 Date.prototype.startOfYear = function() {
   const newDate = new Date(this.getFullYear(), 0, 1);
   return newDate;
-}
+};
 
 Date.prototype.dateOnly = function() {
   const newDate = new Date(this);
