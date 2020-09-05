@@ -26,7 +26,7 @@
         </div>
         <img :src="getUrl(experience.logoName)" />
       </div>
-      <div class="description">{{ experience.description }}</div>
+      <p class="description">{{ experience.description }}</p>
     </div>
   </div>
 </template>
@@ -96,5 +96,9 @@ export default {
 img {
   height: 112px;
   margin-right: 48px;
+}
+.description {
+  font-size: 18px;
+  line-height: 1.5em;
 }
 </style>

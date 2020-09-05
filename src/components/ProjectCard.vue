@@ -11,12 +11,14 @@
         <a
           v-if="project.sourceCodeURL"
           :href="project.sourceCodeURL"
+          target="_blank"
           class="src"
           ><GitHubIcon :size="16"></GitHubIcon> Source code</a
         >
         <a
           v-if="project.liveSiteURL"
           :href="project.liveSiteURL"
+          target="_blank"
           class="visit-site"
           >Visit Site</a
         >

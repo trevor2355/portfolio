@@ -74,7 +74,7 @@ export default {
       );
     },
     showExperienceById(id) {
-      console.log("id to be shown: ", id)
+      console.log("id to be shown: ", id);
       this.experienceListData.forEach(experience => {
         experience.displayed = experience.id === id ? true : false;
       });
