@@ -40,7 +40,7 @@ export default {
 
 #contact {
   position: relative;
-  height: 100vh;
+  // height: 100vh;
   background-color: $veryLight;
 }
 h2 {
@@ -62,7 +62,8 @@ h2 {
 .icons {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 240px;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 .icon-container {
   text-align: center;
