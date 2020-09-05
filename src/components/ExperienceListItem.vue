@@ -8,7 +8,7 @@
     <span v-if="!experience.displayed" class="cheveron"
       ><CheveronDown :size="32"></CheveronDown
     ></span>
-    <span v-else class="cheveron"><CheveronUp :size="32" ></CheveronUp></span>
+    <span v-else class="cheveron"><CheveronUp :size="32"></CheveronUp></span>
     <div v-if="experience.displayed" class="additional-info">
       <div class="header-info">
         <div>
@@ -51,7 +51,7 @@ export default {
     },
     getUrl(name) {
       // return require("../assets/" + name);
-      console.log(name)
+      console.log(name);
       var images = require.context("@/assets/logos", false, /\.png$/);
       let productImage = "";
       try {
