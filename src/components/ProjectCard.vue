@@ -8,8 +8,18 @@
       </div>
       <div class="description">{{ project.description }}</div>
       <div class="footer">
-        <a v-if="project.sourceCodeURL" :href="project.sourceCodeURL" class="src"><GitHubIcon :size="16"></GitHubIcon> Source code</a>
-        <a v-if="project.liveSiteURL" :href="project.liveSiteURL" class="visit-site">Visit Site</a>
+        <a
+          v-if="project.sourceCodeURL"
+          :href="project.sourceCodeURL"
+          class="src"
+          ><GitHubIcon :size="16"></GitHubIcon> Source code</a
+        >
+        <a
+          v-if="project.liveSiteURL"
+          :href="project.liveSiteURL"
+          class="visit-site"
+          >Visit Site</a
+        >
       </div>
     </div>
   </div>
@@ -26,7 +36,7 @@ export default {
   methods: {
     getUrl(name) {
       // return require("../assets/" + name);
-      var images = require.context("@/assets/", false, /\.png$/);
+      var images = require.context("@/assets/images", false, /\.png$/);
       let productImage = "";
       try {
         productImage = images(`./${name}`);
@@ -96,7 +106,7 @@ img {
 .visit-site {
   color: white;
   font-size: 12px;
-  background-color: #698F3F;
+  background-color: #698f3f;
   width: 25%;
   text-align: center;
   padding-top: 4px;

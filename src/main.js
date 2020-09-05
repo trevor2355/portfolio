@@ -1,7 +1,15 @@
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
-import "@/augments";
+import "@/helpers/augments";
+import "@/helpers/filters";
+import VueScrollTo from "vue-scrollto";
+
+Vue.use(VueScrollTo, {
+  offset: -25,
+  duration: 1000,
+  easing: "ease"
+});
 
 Vue.config.productionTip = false;
 

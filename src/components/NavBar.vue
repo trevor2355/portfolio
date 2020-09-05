@@ -1,9 +1,9 @@
 <template>
   <nav id="nav">
-    <a>Home</a>
-    <a>Projects</a>
-    <a>Experience</a>
-    <a>Contact Me</a>
+    <a href="" v-scroll-to="'#home'">Home</a>
+    <a href="" v-scroll-to="'#projects'">Projects</a>
+    <a href="" v-scroll-to="'#experience'">Experience</a>
+    <a href="" v-scroll-to="'#contact'">Contact Me</a>
   </nav>
 </template>
 <style lang="scss" scoped>
@@ -25,6 +25,8 @@
     padding-top: 12px;
     padding-bottom: 12px;
     padding-right: 4%;
+    color: $black;
+    text-decoration: none;
   }
   a:hover {
     cursor: pointer;

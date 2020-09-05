@@ -1,5 +1,5 @@
 <template>
-  <div id="project">
+  <div id="projects">
     <h2>Projects</h2>
     <div class="line"></div>
     <div class="projects-container">
@@ -108,7 +108,7 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/colors.scss";
 
-#project {
+#projects {
   position: relative;
   min-height: 100vh;
   background-color: $veryLight;

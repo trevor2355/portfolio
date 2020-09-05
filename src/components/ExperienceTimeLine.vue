@@ -5,6 +5,12 @@
       left: this.findStartingPercentage(experience),
       width: this.findWidthPercentage(experience)
     }"
+    href="#"
+    v-scroll-to="{
+      el: `#experience-${experience.id}`,
+      offset: -50
+    }"
+    @click="showExperience"
   >
     <div class="header">
       <div class="title">{{ experience.company }}</div>
@@ -41,6 +47,10 @@ export default {
       const decimal = daysBetween / 365;
       let percentage = (decimal * 100).toFixed(0).toString() + "%";
       return percentage;
+    },
+    showExperience() {
+      console.log("show experience: ", this.experience.id);
+      this.$emit("show-experience", this.experience.id);
     }
   }
 };

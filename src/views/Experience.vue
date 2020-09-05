@@ -7,6 +7,7 @@
         v-for="experience in filtered(experiences)"
         :key="experience.id"
         :experience="experience"
+        @show-experience="showExperienceById"
       />
     </div>
     <div class="timelineContainer">
@@ -38,6 +39,7 @@
           v-for="experience in experiences"
           :key="experience.id"
           :experience="experience"
+          @show-experience="showExperienceById"
         />
       </div>
     </div>
@@ -68,9 +70,12 @@ export default {
             "Created therapist web-platform using vue.js",
             "Created ios/android application with React Native"
           ],
-          description: "Intensive immersive program. Learned React to build front-end applications. Learned many database technologies such as MySQL, Postgres, and MongoDB. Intensive immersive program. Learned React to build front-end applications. Learned many database technologies such as MySQL, Postgres, and MongoDB.",
+          description:
+            "Intensive immersive program. Learned React to build front-end applications. Learned many database technologies such as MySQL, Postgres, and MongoDB. Intensive immersive program. Learned React to build front-end applications. Learned many database technologies such as MySQL, Postgres, and MongoDB.",
           startDate: new Date(2020, 6, 1),
           endDate: new Date(),
+          location: "Remote",
+          logoName: "ascendant.png",
           displayed: false
         },
         {
@@ -82,10 +87,13 @@ export default {
             "Learned React to build front-end applications",
             "Learned many database technologies such as MySQL, Postgres, and MongoDB"
           ],
-          description: "Intensive immersive program. Learned React to build front-end applications. Learned many database technologies such as MySQL, Postgres, and MongoDB. Intensive immersive program. Learned React to build front-end applications. Learned many database technologies such as MySQL, Postgres, and MongoDB.",
+          description:
+            "Intensive immersive program. Learned React to build front-end applications. Learned many database technologies such as MySQL, Postgres, and MongoDB. Intensive immersive program. Learned React to build front-end applications. Learned many database technologies such as MySQL, Postgres, and MongoDB.",
           startDate: new Date(2020, 1, 1),
           endDate: new Date(2020, 4, 3),
-          displayed: true
+          location: "Denver, Colorado",
+          logoName: "hack-reactor.png",
+          displayed: false
         },
         {
           id: 3,
@@ -97,9 +105,12 @@ export default {
             "Prepared and gave sales presentations",
             "Worked directly with customer service to ensure customer satisfaction"
           ],
-          description: "Intensive immersive program. Learned React to build front-end applications. Learned many database technologies such as MySQL, Postgres, and MongoDB. Intensive immersive program. Learned React to build front-end applications. Learned many database technologies such as MySQL, Postgres, and MongoDB.",
+          description:
+            "Intensive immersive program. Learned React to build front-end applications. Learned many database technologies such as MySQL, Postgres, and MongoDB. Intensive immersive program. Learned React to build front-end applications. Learned many database technologies such as MySQL, Postgres, and MongoDB.",
           startDate: new Date(2019, 0, 1),
           endDate: new Date(2019, 10, 30),
+          location: "Ogden, Utah",
+          logoName: "bell.png",
           displayed: false
         },
         {
@@ -112,9 +123,12 @@ export default {
             "Prepared and gave sales presentations",
             "Worked directly with customer service to ensure customer satisfaction"
           ],
-          description: "Intensive immersive program. Learned React to build front-end applications. Learned many database technologies such as MySQL, Postgres, and MongoDB. Intensive immersive program. Learned React to build front-end applications. Learned many database technologies such as MySQL, Postgres, and MongoDB.",
+          description:
+            "Intensive immersive program. Learned React to build front-end applications. Learned many database technologies such as MySQL, Postgres, and MongoDB. Intensive immersive program. Learned React to build front-end applications. Learned many database technologies such as MySQL, Postgres, and MongoDB.",
           startDate: new Date(2018, 6, 1),
           endDate: new Date(2018, 11, 31),
+          location: "Ogden, Utah",
+          logoName: "bell.png",
           displayed: false
         },
         {
@@ -127,9 +141,12 @@ export default {
             "Prepared and gave sales presentations",
             "Worked directly with customer service to ensure customer satisfaction"
           ],
-          description: "Intensive immersive program. Learned React to build front-end applications. Learned many database technologies such as MySQL, Postgres, and MongoDB. Intensive immersive program. Learned React to build front-end applications. Learned many database technologies such as MySQL, Postgres, and MongoDB.",
+          description:
+            "Intensive immersive program. Learned React to build front-end applications. Learned many database technologies such as MySQL, Postgres, and MongoDB. Intensive immersive program. Learned React to build front-end applications. Learned many database technologies such as MySQL, Postgres, and MongoDB.",
           startDate: new Date(2018, 0, 1),
           endDate: new Date(2018, 5, 30),
+          location: "Ogden, Utah",
+          logoName: "bell.png",
           displayed: false
         },
         {
@@ -142,9 +159,12 @@ export default {
             "Prepared and gave sales presentations",
             "Worked directly with customer service to ensure customer satisfaction"
           ],
-          description: "Intensive immersive program. Learned React to build front-end applications. Learned many database technologies such as MySQL, Postgres, and MongoDB. Intensive immersive program. Learned React to build front-end applications. Learned many database technologies such as MySQL, Postgres, and MongoDB.",
+          description:
+            "Intensive immersive program. Learned React to build front-end applications. Learned many database technologies such as MySQL, Postgres, and MongoDB. Intensive immersive program. Learned React to build front-end applications. Learned many database technologies such as MySQL, Postgres, and MongoDB.",
           startDate: new Date(2017, 7, 15),
           endDate: new Date(2017, 11, 31),
+          location: "Ogden, Utah",
+          logoName: "bell.png",
           displayed: false
         }
       ]
@@ -157,6 +177,11 @@ export default {
           experience.startDate.getTime() >= new Date(this.year, 0, 1) &&
           experience.startDate.getTime() <= new Date(this.year, 11, 31)
       );
+    },
+    showExperienceById(id) {
+      this.experiences.forEach(experience => {
+        experience.displayed = experience.id === id ? true : false;
+      });
     }
   }
 };
