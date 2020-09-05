@@ -7,7 +7,7 @@
     }"
     href="#"
     v-scroll-to="{
-      el: `#experience-${experience.id}`,
+      el: `#experience-${experience.listId}`,
       offset: -50
     }"
     @click="showExperience"
@@ -49,8 +49,7 @@ export default {
       return percentage;
     },
     showExperience() {
-      console.log("show experience: ", this.experience.id);
-      this.$emit("show-experience", this.experience.id);
+      this.$emit("show-experience", this.experience.listId);
     }
   }
 };
