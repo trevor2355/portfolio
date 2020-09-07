@@ -51,7 +51,6 @@ export default {
     },
     getUrl(name) {
       // return require("../assets/" + name);
-      console.log(name);
       var images = require.context("@/assets/logos", false, /\.png$/);
       let productImage = "";
       try {
