@@ -3,7 +3,7 @@ export default [
     id: 1,
     name: "Garden Tracker",
     description:
-      "This is a full stack web application ideal for mobile phone usage.  It allows the user to track the progress of thier garden by taking pictures of their plants and uploading them to the app.",
+      "A full stack web application ideal for mobile phone usage.  It allows the user to track the progress of thier garden by taking pictures of their plants and uploading them to the app.",
     libraries: ["React"],
     sourceCodeURL: "https://github.com/trevor2355/garden-tracker",
     liveSiteURL: "",
@@ -15,7 +15,7 @@ export default [
     id: 2,
     name: "Calcultor",
     description:
-      "This is a full stack web application ideal for mobile phone usage.  It allows the user to track the progress of thier garden by taking pictures of their plants and uploading them to the app.",
+      "My first Vue.js application.  The backend was built using node.js and postgreSQL.  It features a user authentication strategy using JSON Web Tokens and passport.js.  It also has a full RESTfull API that allows users to exchange the use of a calculator for credits.",
     libraries: ["React"],
     sourceCodeURL: "https://github.com/trevor2355/rest-api-calculator-backend",
     liveSiteURL: "http://ec2-54-183-247-150.us-west-1.compute.amazonaws.com/",
@@ -27,7 +27,7 @@ export default [
     id: 3,
     name: "Loan Smasher",
     description:
-      "This is a full stack web application ideal for mobile phone usage.  It allows the user to track the progress of thier garden by taking pictures of their plants and uploading them to the app.",
+      "Loan Smasher is a Front-End web application written using React.js.  This application allows the user to gain insight on how they can quickly pay off their loans.  The application uses algorithims to calculate expenses taxes and interest rates to put the user in control of their finances.",
     libraries: ["React"],
     sourceCodeURL: "https://github.com/trevor2355/loan-smasher",
     liveSiteURL: "",
@@ -39,7 +39,7 @@ export default [
     id: 4,
     name: "Echo Park",
     description:
-      "This is a full stack web application ideal for mobile phone usage.  It allows the user to track the progress of thier garden by taking pictures of their plants and uploading them to the app.",
+      "A clone of a used car dealership.  To complete this project I worked in a service oriented architecture with a team of engineers.  We inherited legacy code from another team and were tasked to deploy and scale the architecture of each of our microservices to handle over 1,000 requests per second.  We worked with over 60 million records of data.  I performed extensive tests on relational and non-relational databases to decide which would be best for my microservice.",
     libraries: ["React"],
     sourceCodeURL: "https://github.com/SDC-ghrden03",
     liveSiteURL: "",
@@ -51,7 +51,7 @@ export default [
     id: 5,
     name: "There by the Sea",
     description:
-      "This is a full stack web application ideal for mobile phone usage.  It allows the user to track the progress of thier garden by taking pictures of their plants and uploading them to the app.",
+      "A clone of Airbnb.  To complete this project I worked in a service oriented achitecture with a team of engineers.  The app was built using React.js and features a test suite built with jest and enzyme.",
     libraries: ["React"],
     sourceCodeURL: "https://github.com/There-By-The-Sea",
     liveSiteURL: "",
@@ -63,7 +63,7 @@ export default [
     id: 6,
     name: "Ascendant Anxiety",
     description:
-      "This is a full stack web application ideal for mobile phone usage.  It allows the user to track the progress of thier garden by taking pictures of their plants and uploading them to the app.",
+      "This project includes a Vue.js therapist web-platform that allows therapist to gain insights about their patients mental health patters.  It also includes an android and iOS mobile application for patients to track their mental health patterns.  Both are integrated with an AWS serverless backend built with a full RESTfull Api.",
     libraries: ["React"],
     sourceCodeURL: "",
     liveSiteURL: "",

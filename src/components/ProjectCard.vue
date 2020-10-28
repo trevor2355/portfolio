@@ -2,9 +2,11 @@
   <div class="project">
     <img :src="getUrl(project.imageURL)" :alt="project.imageUrl" />
     <div class="project-details">
-      <div v-if="project.inProgress" class="inProgress">In Progress</div>
-      <div class="title">
-        {{ project.name }}
+      <div class="details-header">
+        <div class="title">
+          {{ project.name }}
+        </div>
+        <div v-if="project.inProgress" class="inProgress">In Progress</div>
       </div>
       <div class="description">{{ project.description }}</div>
       <div class="footer">
@@ -62,6 +64,8 @@ export default {
   min-width: 300px;
   border-bottom: solid 12px $lightBlue;
   box-shadow: 7px 7px 14px #7d7d7d, -7px -7px 14px #ffffff;
+  display: flex;
+  flex-direction: column;
 }
 .img-container {
   min-height: 220px;
@@ -70,7 +74,16 @@ img {
   width: 100%;
 }
 .project-details {
+  flex-grow: 1;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+.details-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .title {
   font-size: 18px;
@@ -79,10 +92,11 @@ img {
 .description {
   font-size: 14px;
   margin: 16px;
+  flex-grow: 1;
 }
 .inProgress {
-  position: absolute;
-  right: 16px;
+  // position: absolute;
+  // right: 16px;
   background-color: #eb525c;
   color: white;
   font-size: 12px;
@@ -91,6 +105,7 @@ img {
   padding-top: 4px;
   padding-bottom: 4px;
   border-radius: 4px;
+  margin: 16px;
 }
 .footer {
   display: flex;
@@ -120,37 +135,4 @@ img {
   cursor: pointer;
   background-color: #537132;
 }
-// .experience {
-//   position: absolute;
-//   height: 160px;
-//   background-color: white;
-//   color: $black;
-//   text-align: center;
-//   box-shadow: 7px 7px 14px #7d7d7d, -7px -7px 14px #ffffff;
-// }
-// .experience:hover {
-//   cursor: pointer;
-//   box-shadow: 8px 8px 16px #7d7d7d, -8px -8px 16px #ffffff;
-// }
-// .header {
-//   border-bottom: solid 2px $blue;
-//   padding: 8px;
-// }
-// .title {
-//   font-size: 16px;
-// }
-// .info {
-//   padding: 8px;
-// }
-// .jobTitle {
-//   text-align: left;
-//   font-size: 12px;
-// }
-// .point {
-//   font-size: 12px;
-//   text-align: left;
-//   text-indent: -18px;
-//   padding-left: 20px;
-//   margin-top: 4px;
-// }
 </style>
